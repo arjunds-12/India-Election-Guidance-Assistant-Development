@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Election Guide | Your Personal Assistant</title>
+    <meta name="description" content="Your personal election guide for India — from registration to casting your vote. Clear, localized, step-by-step guidance.">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge">Elections 2026/2027</div>
+                <h1>Empowering the Indian Voter</h1>
+                <p>Your personal election guide for India — from registration to casting your vote. Simple, clear, and trustworthy guidance.</p>
+                <div class="hero-btns">
+                    <a href="#dashboard" class="btn btn-primary">Check Eligibility</a>
+                    <a href="#roadmap" class="btn btn-secondary">Voter Registration</a>
+                </div>
+            </div>
+            <!-- Interactive Background Elements -->
+            <div class="chakra-bg"></div>
+        </section>
+
+        <!-- Dashboard / Eligibility & Polling Booth -->
+        <section id="dashboard" class="container dashboard-section">
+            <div class="dashboard-grid">
+                <!-- Eligibility Checker -->
+                <div class="glass card card-interactive" id="eligibilityCard">
+                    <div class="card-header">
+                        <span class="icon">🔍</span>
+                        <h3>Am I Eligible to Vote?</h3>
+                    </div>
+                    <div class="card-body" id="eligibilityForm">
+                        <p class="text-muted">Answer a few questions to confirm your eligibility.</p>
+                        <div class="form-group mt-3">
+                            <label>Are you an Indian Citizen?</label>
+                            <div class="radio-group">
+                                <button class="btn-outline option-btn" data-type="citizen" data-val="yes">Yes</button>
+                                <button class="btn-outline option-btn" data-type="citizen" data-val="no">No</button>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3" id="ageGroup" style="display:none;">
+                            <label>What is your age as of January 1st?</label>
+                            <input type="number" id="ageInput" placeholder="Enter your age" class="input-glass">
+                            <button class="btn btn-primary mt-2" id="checkEligibilityBtn" style="width:100%;">Check Status</button>
+                        </div>
+                        <div id="eligibilityResult" class="mt-3"></div>
+                    </div>
+                </div>
+
+                <!-- Polling Booth Finder -->
+                <div class="glass card card-interactive">
+                    <div class="card-header">
+                        <span class="icon">📍</span>
+                        <h3>Find My Polling Booth</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted">Enter your PIN code to find your local polling station.</p>
+                        <div class="form-group mt-3">
+                            <input type="text" id="pinInput" placeholder="e.g. 110001" class="input-glass">
+                            <button class="btn btn-primary mt-2" id="findBoothBtn" style="width:100%;">Locate Booth</button>
+                        </div>
+                        <div id="boothResult" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Guidance -->
+        <section id="roadmap" class="container">
+            <h2 class="section-title">Voter Registration Guide</h2>
+            <p class="section-subtitle">A simple step-by-step checklist to get your Voter ID (EPIC Card).</p>
+            <div class="registration-steps">
+                <div class="glass step-card">
+                    <div class="step-num bg-saffron">1</div>
+                    <div class="step-content">
+                        <h3>Prepare Documents</h3>
+                        <p>Gather your passport-size photo, Address proof (Aadhaar, Passport, or Utility bill), and Age proof.</p>
+                    </div>
+                </div>
+                <div class="glass step-card">
+                    <div class="step-num bg-white">2</div>
+                    <div class="step-content">
+                        <h3>Fill Form 6</h3>
+                        <p>Apply online via the Voter Helpline App or the NVSP portal. Form 6 is for new registrations.</p>
+                        <a href="#" class="btn btn-outline btn-sm mt-2">Open NVSP Portal</a>
+                    </div>
+                </div>
+                <div class="glass step-card">
+                    <div class="step-num bg-green">3</div>
+                    <div class="step-content">
+                        <h3>Verification (BLO)</h3>
+                        <p>A Booth Level Officer (BLO) may visit your address to verify the details you provided.</p>
+                    </div>
+                </div>
+                <div class="glass step-card">
+                    <div class="step-num bg-navy">4</div>
+                    <div class="step-content">
+                        <h3>Receive EPIC Card</h3>
+                        <p>Your Voter ID will be sent via speed post to your registered address within a few weeks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Timeline -->
+        <section class="container">
+            <h2 class="section-title">Election Timeline (Mock 2026/2027)</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot bg-saffron"></div>
+                    <div class="timeline-content glass">
+                        <h4>Draft Electoral Roll Published</h4>
+                        <p class="date">October 15</p>
+                        <p>Check if your name is on the list. If not, this is your window to apply for inclusion.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot bg-white"></div>
+                    <div class="timeline-content glass">
+                        <h4>Claims & Objections Window</h4>
+                        <p class="date">Oct 15 - Nov 30</p>
+                        <p>Submit Form 8 for corrections (address change, typos) or Form 7 for deletions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot bg-green"></div>
+                    <div class="timeline-content glass">
+                        <h4>Final Roll Publication</h4>
+                        <p class="date">January 5</p>
+                        <p>The definitive list of voters is released ahead of upcoming elections.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot bg-navy"></div>
+                    <div class="timeline-content glass">
+                        <h4>Election Day & Results</h4>
+                        <p class="date">March - May (TBD)</p>
+                        <p>Head to your designated polling booth. Bring your EPIC card or approved alternative ID.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assistant Widget (FAQ Chatbot) -->
+        <div class="assistant-trigger" id="assistantTrigger">
+            <span style="font-size: 1.5rem;">💬</span>
+        </div>
+
+        <div class="assistant-panel glass" id="assistantPanel">
+            <div class="assistant-header bg-primary">
+                <div class="header-title">
+                    <strong>Election Sahayak</strong>
+                    <span class="status-dot"></span>
+                </div>
+                <span style="cursor:pointer; font-size: 1.5rem;" id="closeAssistant">&times;</span>
+            </div>
+            <div class="assistant-body" id="chatBody">
+                <div class="chat-bubble bot">
+                    Namaste! 🙏 I am your Election Sahayak. Ask me about voter registration, deadlines, or how to vote in India!
+                </div>
+                <div class="suggested-chips">
+                    <span class="chip">What is EPIC?</span>
+                    <span class="chip">How to link Aadhaar?</span>
+                    <span class="chip">Missing name in list</span>
+                </div>
+            </div>
+            <div class="assistant-footer">
+                <input type="text" class="assistant-input" id="chatInput" placeholder="Type your question...">
+                <button class="btn btn-primary" style="padding: 8px 15px; border-radius: 50%;" id="sendBtn">➤</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
